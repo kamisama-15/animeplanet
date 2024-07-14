@@ -1,0 +1,29 @@
+.curtain-effect {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .curtain-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .curtain-effect:hover::before {
+    transform: translateX(0);
+  }
+  .curtain-effect:hover button {
+    color: white;
+  }
+  .curtain-effect button {
+    position: relative;
+    z-index: 1;
+  }
+  
